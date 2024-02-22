@@ -326,7 +326,7 @@ export class Settings extends Storable {
 			this.hard = parsed.hard;
 			this.dark = parsed.dark;
 			this.colorblind = parsed.colorblind;
-			this.tutorial = parsed.tutorial;
+			this.tutorial = 0;
 		}
 	}
 }
