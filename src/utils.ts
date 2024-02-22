@@ -321,12 +321,12 @@ export class Settings extends Storable {
 
 	constructor(settings?: string) {
 		super();
+		this.tutorial = 0;
 		if (settings) {
 			const parsed = JSON.parse(settings) as Settings;
 			this.hard = parsed.hard;
 			this.dark = parsed.dark;
 			this.colorblind = parsed.colorblind;
-			this.tutorial = 0;
 		}
 	}
 }

@@ -47,6 +47,7 @@
 	const delay = DELAY_INCREMENT * ROWS + 800;
 
 	let showTutorial = $settings.tutorial === 3;
+	console.log($settings);
 	let showSettings = false;
 	let showStats = false;
 	let showHistorical = false;
