@@ -2,7 +2,7 @@ name: Publish
 
 on:
   push:
-    branches: [main]
+    branches: [sing-2024]
 
 jobs:
   deploy:
