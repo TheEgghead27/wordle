@@ -1,6 +1,6 @@
 const words = {
 	"words": [
-		"great"
+		"monet"
 	],
 	"valid": [
 		"aahed",
@@ -5827,6 +5827,8 @@ const words = {
 		"monde",
 		"mondo",
 		"moner",
+		"money",
+		"monge",
 		"mongo",
 		"mongs",
 		"monic",
@@ -5860,6 +5862,7 @@ const words = {
 		"mopsy",
 		"mopus",
 		"morae",
+		"moran",
 		"moras",
 		"morat",
 		"moray",
@@ -6725,6 +6728,7 @@ const words = {
 		"penks",
 		"penna",
 		"penni",
+		"penny",
 		"pents",
 		"peons",
 		"peony",
@@ -7408,6 +7412,7 @@ const words = {
 		"rayah",
 		"rayas",
 		"rayed",
+		"rayen",
 		"rayle",
 		"rayne",
 		"razed",
@@ -8410,6 +8415,7 @@ const words = {
 		"slank",
 		"slaps",
 		"slart",
+		"slate",
 		"slats",
 		"slaty",
 		"slaws",
