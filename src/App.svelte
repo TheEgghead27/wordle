@@ -27,6 +27,7 @@
 	let state: GameState;
 	let toaster: Toaster;
 
+	localStorage.clear();
 	settings.set(new Settings(localStorage.getItem("settings")));
 	settings.subscribe((s) => localStorage.setItem("settings", JSON.stringify(s)));
 
