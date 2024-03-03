@@ -98,7 +98,6 @@
 			() => toaster.pop(PRAISE[game.guesses - 1]),
 			DELAY_INCREMENT * COLS + DELAY_INCREMENT
 		);
-		setTimeout(setShowStatsTrue, delay * 1.4);
 		stats.addWin(game.guesses, modeData.modes[$mode]);
 		stats = stats;
 		localStorage.setItem(`stats-${$mode}`, stats.toString());
