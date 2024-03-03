@@ -47,6 +47,7 @@
 		window.location.hash = GameMode[m];
 		stats = new Stats(localStorage.getItem(`stats-${m}`) || m);
 		word = words.words[seededRandomInt(0, words.words.length, modeData.modes[m].seed)];
+		window.alert(`Word is: ${word.toUpperCase()}`);
 		if (modeData.modes[m].historical) {
 			state = new GameState(m, localStorage.getItem(`state-${m}-h`));
 		} else {

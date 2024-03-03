@@ -99,11 +99,9 @@
 			DELAY_INCREMENT * COLS + DELAY_INCREMENT
 		);
 		setTimeout(setShowStatsTrue, delay * 1.4);
-		if (!modeData.modes[$mode].historical) {
-			stats.addWin(game.guesses, modeData.modes[$mode]);
-			stats = stats;
-			localStorage.setItem(`stats-${$mode}`, stats.toString());
-		}
+		stats.addWin(game.guesses, modeData.modes[$mode]);
+		stats = stats;
+		localStorage.setItem(`stats-${$mode}`, stats.toString());
 	}
 
 	function lose() {
@@ -207,12 +205,8 @@
 </Modal>
 
 <Modal bind:visible={showStats}>
-	{#if modeData.modes[$mode].historical}
-		<h2 class="historical">Statistics not available for historical games</h2>
-	{:else}
-		<Statistics data={stats} />
-		<Distribution distribution={stats.guesses} {game} />
-	{/if}
+	<Statistics data={stats} />
+	<Distribution distribution={stats.guesses} {game} />
 	<Separator visible={!game.active}>
 		<Timer
 			slot="1"
@@ -223,19 +217,6 @@
 		<Share slot="2" state={game} />
 	</Separator>
 	<ShareGame wordNumber={game.wordNumber} />
-	{#if !game.active}
-		<Definition {word} alternates={2} />
-	{:else}
-		<!-- Fade with delay is to prevent a bright red button from appearing as soon as refresh is pressed -->
-		<div
-			in:fade={{ delay: 300 }}
-			class="button concede"
-			on:click={concede}
-			on:keydown={concede}
-		>
-			give up
-		</div>
-	{/if}
 </Modal>
 
 <Modal fullscreen={true} bind:visible={showSettings}>
