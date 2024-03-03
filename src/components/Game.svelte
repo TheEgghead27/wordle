@@ -108,7 +108,10 @@
 
 	function lose() {
 		game.active = false;
-		setTimeout(setShowStatsTrue, delay);
+		setTimeout(
+			() => toaster.pop(`So close! Your word was "${word.toUpperCase()}"`, 5),
+			DELAY_INCREMENT * COLS + DELAY_INCREMENT
+		);
 		if (!modeData.modes[$mode].historical) {
 			stats.addLoss(modeData.modes[$mode]);
 			stats = stats;
